@@ -1,0 +1,9 @@
+[workspace.lints.clippy]
+nursery = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+
+[workspace]
+resolver = "2"
+members = [
+	"crates/simple-api",
+]

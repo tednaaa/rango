@@ -6,8 +6,8 @@ edition = "2021"
 [dependencies]
 clap = { version = "4.5.29", features = ["derive"] }
 
-fs_extra.workspace = true
 anyhow.workspace = true
+include_dir.workspace = true
 
 [lints]
 workspace = true

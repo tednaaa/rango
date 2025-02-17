@@ -11,4 +11,5 @@ members = [
 
 [workspace.dependencies]
 anyhow = "1.0.95"
-fs_extra = "1.3.0"
+
+include_dir = "0.7.4"

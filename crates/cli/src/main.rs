@@ -12,7 +12,7 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
-	New {
+	Setup {
 		#[arg(short, long)]
 		name: String,
 	},
@@ -35,7 +35,7 @@ fn main() -> anyhow::Result<()> {
 	let cli = Cli::parse();
 
 	match &cli.command {
-		Commands::New { name } => commands::create_project(name),
+		Commands::Setup { name } => commands::setup_project(name),
 		Commands::Generate { component } => match component {
 			Components::Entity { name } => commands::generate_entity(name),
 		},

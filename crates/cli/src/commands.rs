@@ -12,7 +12,7 @@ pub fn setup_project(name: &str) -> anyhow::Result<()> {
 	let project_path = current_dir.join(name);
 
 	if project_path.exists() {
-		anyhow::bail!("Directory already exists: {project_path:?}");
+		anyhow::bail!("Directory already exists: {name}");
 	}
 
 	fs::create_dir_all(&project_path)?;
@@ -21,7 +21,7 @@ pub fn setup_project(name: &str) -> anyhow::Result<()> {
 		copy_dir_from_embedded(template_dir, &project_path)?;
 	}
 
-	println!("Project created: {project_path:?}");
+	println!("Project created: {name}");
 	Ok(())
 }
 
